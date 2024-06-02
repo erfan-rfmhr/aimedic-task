@@ -98,7 +98,7 @@ class CRUDUser(CRUDBase[UserModel, BaseUserCreate | UserCreate, UserUpdate]):
         if isinstance(obj_in, dict):
             update_data = obj_in
         else:
-            update_data = obj_in.dict(exclude_unset=True)
+            update_data = obj_in.model_dump(exclude_unset=True)
         if update_data["new_password"] == update_data["new_password_confirm"]:
             hashed_password = get_password_hash(update_data["new_password"])
             del update_data["new_password"]
