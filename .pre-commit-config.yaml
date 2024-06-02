@@ -26,26 +26,6 @@ repos:
     hooks:
       - id: black
 
-  - repo: https://github.com/jazzband/pip-tools
-    rev: 7.3.0
-    hooks:
-      - id: pip-compile
-        name: pip-compile requirements.in
-        args: [requirements/requirements.in]
-        files: ^(requirements/requirements.in|pyproject.toml)$
-      - id: pip-compile
-        name: pip-compile requirements-docs.in
-        args: [requirements/requirements-docs.in]
-        files: ^(requirements/requirements-docs.in|pyproject.toml)$
-      - id: pip-compile
-        name: pip-compile requirements-dev.in
-        args: [requirements/requirements-dev.in]
-        files: ^(requirements/requirements-dev.in|pyproject.toml)$
-      - id: pip-compile
-        name: pip-compile requirements-test.in
-        args: [requirements/requirements-test.in]
-        files: ^(requirements/requirements-test.in|pyproject.toml)$
-
 ci:
   autofix_commit_msg: 🎨 [pre-commit.ci] Auto format from pre-commit.com hooks
   autoupdate_commit_msg: ⬆ [pre-commit.ci] pre-commit autoupdate
