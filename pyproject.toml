@@ -19,6 +19,11 @@ python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 omegaconf = "^2.3.0"
 importlib-metadata = "^7.1.0"
 
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+bump-pydantic = "^0.8.0"
 
 [tool.poetry.group.test]
 optional = true
