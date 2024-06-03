@@ -43,6 +43,8 @@ class UserModel(Base):
     fullname: Mapped[str] = mapped_column(String, nullable=False, unique=False)
     username: Mapped[str] = mapped_column(String, nullable=False, unique=True)
     password: Mapped[str] = mapped_column(String, nullable=False, unique=False)
+    phone_number: Mapped[str] = mapped_column(String)
+    last_login: Mapped[datetime] = mapped_column(DateTime(timezone=True))
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, unique=False
     )
