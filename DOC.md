@@ -25,3 +25,12 @@ Using alembic, I applied a new migration automatically:
   + alembic revision --autogenerate -m "add phone number and last login field"
 + apply migrations
   + alembic upgrade head
+
+---
+
+### Dockerize the project
+I wrote a Dockerfile for the project. <br>
++ build the image
+  + docker build -t fastapi-app .
++ run
+  + docker run -d -p 8000:8000 fastapi-app
