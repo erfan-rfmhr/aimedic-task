@@ -69,6 +69,8 @@ class CRUDUser(CRUDBase[UserModel, BaseUserCreate | UserCreate, UserUpdate]):
                 obj_in.status if obj_in.status is not None else UserStatusValues.PENDING
             ),
             roles=roles,
+            phone_number=obj_in.phone_number,
+            last_login=obj_in.last_login,
         )
         db.add(db_obj)
         db.commit()

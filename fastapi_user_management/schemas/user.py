@@ -1,4 +1,6 @@
 """Module to define User schemas."""
+from datetime import datetime
+
 from pydantic import BaseModel, ConfigDict, EmailStr
 
 from fastapi_user_management.models.user import UserStatusValues
@@ -30,6 +32,8 @@ class BaseUserCreate(UserBase):
     username: EmailStr
     password: str | None = None
     roles: list[RoleBase]
+    phone_number: str
+    last_login: datetime
     model_config = ConfigDict(from_attributes=True)
 
 
@@ -39,6 +43,8 @@ class UserCreate(BaseUserCreate):
     fullname: str
     username: EmailStr
     password: str
+    phone_number: str
+    last_login: datetime
     roles: list[RoleBase]
     model_config = ConfigDict(from_attributes=True)
 

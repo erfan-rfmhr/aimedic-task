@@ -1,4 +1,5 @@
 """Initiate Database and create admin user."""
+from datetime import datetime
 from typing import Any
 
 from sqlalchemy.orm import Session
@@ -23,6 +24,8 @@ def init_db(db: Session) -> None:
             username=SETTINGS.ADMIN_EMAIL,
             fullname=SETTINGS.ADMIN_FULLNAME,
             password=SETTINGS.ADMIN_PASSWORD,
+            phone_number="912",
+            last_login=datetime.now(),
             status=UserStatusValues.ACTIVE,
             roles=[RoleBase(name=RoleNames.ADMIN)],
         )
