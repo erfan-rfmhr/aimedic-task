@@ -17,6 +17,13 @@ class UserBase(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 
+class UserProfile(UserBase):
+    """Schema to display user profile."""
+
+    phone_number: str
+    model_config = ConfigDict(from_attributes=True)
+
+
 class UserLogin(BaseModel):
     """Schema use for login request."""
 
