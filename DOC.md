@@ -39,3 +39,8 @@ I wrote a Dockerfile for the project. <br>
 
 ### User profile endpoint
 I created a new endpoint for user profile: /user/profile
+
+---
+
+### Upload file endpoint
+I created a new endpoint alongside schema and model for uploading files: /user/upload-dicom

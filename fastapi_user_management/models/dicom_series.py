@@ -19,4 +19,4 @@ class DicomSeriesModel(Base):
     SeriesInstanceUID: Mapped[str] = mapped_column(String)
     Modality: Mapped[str] = mapped_column(String)
     BodyPartExamined: Mapped[str] = mapped_column(String)
-    PatientID: Mapped[int] = mapped_column(Integer, ForeignKey("user_accounts.id"))
+    PatientID: Mapped[int] = mapped_column(Integer, ForeignKey("user_account.id"))
