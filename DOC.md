@@ -34,3 +34,8 @@ I wrote a Dockerfile for the project. <br>
   + docker build -t fastapi-app .
 + run
   + docker run -d -p 8000:8000 fastapi-app
+
+---
+
+### User profile endpoint
+I created a new endpoint for user profile: /user/profile
